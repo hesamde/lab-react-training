@@ -13,11 +13,9 @@
     }
 
     return (
-      <div className="box-with-text">
-        <p>
-          {greeting}&nbsp;
+      <div className="item">
+     {greeting}&nbsp;
           {children}
-        </p>
       </div>
     );
   }
