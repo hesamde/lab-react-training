@@ -1,4 +1,4 @@
- function Greetings ({ children, lang, greetings }) {
+ function Greetings ({ children, lang }) {
     let greeting;
     switch (lang) {
       case 'de':
@@ -15,7 +15,7 @@
     return (
       <div className="box-with-text">
         <p>
-          {greeting}
+          {greeting}&nbsp;
           {children}
         </p>
       </div>

@@ -7,8 +7,12 @@ import Greetings from './components/Greetings';
 function App() {
   return (
     <div className="App">
-      <Greetings lang="de">Ludwig</Greetings>
-      <Greetings lang="fr">François</Greetings>
+      <div>
+      <div className='greeting'><Greetings lang="de">Ludwig</Greetings></div>
+    <br/>
+      <div className='greeting' ><Greetings lang="fr">François</Greetings></div>
+      </div>
+
       <IdCard
         lastName="Doe"
         firstName="John"
