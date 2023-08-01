@@ -6,8 +6,7 @@ import Greetings from './components/Greetings';
 import Random from './components/Random';
 import BoxColor from './components/BoxColor';
 import CreditCard from './components/CreditCard';
-
-
+import Rating from './components/Rating';
 
 function App() {
   return (
@@ -28,7 +27,7 @@ function App() {
         bank="BNP"
         owner="Maxence Bouret"
         bgColor="#11aa99"
-        color="white"
+        color="#311465"
       />
 
       <CreditCard
@@ -38,8 +37,9 @@ function App() {
         expirationYear={2021}
         bank="N26"
         owner="Maxence Bouret"
-        bgColor="#eeeeee"
-        color="#222222"
+        bgColor="#000080"
+        color="white"
+        white
       />
 
       <CreditCard
@@ -49,10 +49,17 @@ function App() {
         expirationYear={2019}
         bank="Name of the Bank"
         owner="Firstname Lastname"
-        bgColor="#ddbb55"
+        bgColor="#Bf0A30"
         color="white"
       />
+      <Rating>0</Rating>
+      <Rating>1.49</Rating>
+      <Rating>1.5</Rating>
+      <Rating>3</Rating>
+      <Rating>4</Rating>
+      <Rating>5</Rating>
       </div>
+
 
       <IdCard
         lastName="Doe"
