@@ -100,13 +100,16 @@ function App() {
       <Greetings/>
       <Random/>
       <div className="btn-like">
+      <h2>Iteration 8</h2>
       <LikeButton />
       <LikeButton />
     </div>
+    <h2>Iteration 9</h2>
       <ClickablePicture
       img='maxence.png'
       imgClicked='maxence-glasses.png'/>
   </div>
+  <h2>Iteration 10</h2>
         <Dice/>
 </div>
   );

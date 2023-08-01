@@ -8,29 +8,28 @@ import dice4 from '../assets/images/dice4.png';
 import dice5 from '../assets/images/dice5.png';
 import dice6 from '../assets/images/dice6.png';
 
-function Dice() {
-  const diceArr = [dice0, dice1, dice2, dice3, dice4, dice5, dice6];
-  const getRandomDice = () => {
-    Math.floor(Math.random() * (diceArr.length - 1) + 1);
-    return
-  };
-  const [diceNum, setDice] = useState(getRandomDice);
+const diceArray = [dice0, dice1, dice2, dice3, dice4, dice5, dice6];
 
-  const updateDice = () => {
-    setDice(0);
-    setTimeout(() => {
-      setDice(getRandomDice());
-    }, 1000);
-  };
+const Dice = () => {
+  const [dice, setDice] = useState(diceArray[Math.floor(Math.random() * 6) + 1]);
 
-  return (
-    <img
-      src={diceArr[diceNum]}
-      onClick={updateDice}
-      alt={'dice with value ' + diceNum}
-      width="300"
-    />
+  function showDice() {
+    setDice(diceArray[0]);
+    const newDice = diceArray[Math.floor(Math.random() * 6) + 1];
+    setTimeout(() => setDice(newDice), 400);
+  }
+
+      return (
+    <div>
+      <img
+        onClick={() => showDice()}
+        style={{ width: '300px', height: '300px', padding: '5px'  }}
+        src={dice}
+        alt=""
+        />
+    </div>
   );
-}
+};
+
 
 export default Dice;
