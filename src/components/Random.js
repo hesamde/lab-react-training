@@ -1,4 +1,4 @@
-function Random ({ min, max }) {
+function Random ({ min , max }) {
 
     const byChance = min + Math.floor( Math.random() * max);
     // tasadofi bein 1 ta max ( Math.random() * max)
