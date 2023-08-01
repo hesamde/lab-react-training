@@ -9,6 +9,7 @@ import CreditCard from './components/CreditCard';
 import Rating from './components/Rating';
 import DriverCard from './components/DriverCard';
 import LikeButton from './components/LikeButton';
+import ClickablePicture from './components/ClickablePicture';
 
 
 
@@ -78,7 +79,6 @@ function App() {
           model: "Audi A3",
           licensePlate: "BE33ER"}}/>
       </div>
-
       <IdCard
         lastName="Doe"
         firstName="John"
@@ -101,12 +101,12 @@ function App() {
       <LikeButton />
       <LikeButton />
     </div>
-
+      <ClickablePicture
+      img='maxence.png'
+      imgClicked='maxence-glasses.png'/>
   </div>
 </div>
   );
 }
-
-
 
 export default App;
