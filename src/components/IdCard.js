@@ -1,14 +1,14 @@
 function IdCard({ lastName, firstName, gender, height, birth, picture }) {
     return (
-      <div className="flex flex-col rounded-lg bg-white dark:bg-neutral-700 md:max-w-xl md:flex-row">
-        <div className="flex-none w-48 relative">
+      <div className="item">
+        <div>
           <img
-            className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+            className="item"
             src={picture}
             alt={firstName}
           />
         </div>
-        <div className="flex flex-col justify-start p-6">
+        <div>
           <p>First name: {firstName}</p>
           <p>Last name: {lastName}</p>
           <p>Gender: {gender}</p>
