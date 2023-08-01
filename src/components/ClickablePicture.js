@@ -12,8 +12,7 @@ function ClickablePicture({ img, imgClicked }) {
   return (
     <div onClick={handleClick}>
     <img
-      src={image}
-      alt="dice 1 or 2"
+      src={image} alt="dice 1 or 2"
       style={{
         width: '250px',
         height: '250px',
