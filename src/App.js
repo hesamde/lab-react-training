@@ -13,6 +13,9 @@ import ClickablePicture from './components/ClickablePicture';
 import Dice from './components/Dice'
 import Carousel from './components/Carousel'
 import NumbersTable from './components/NumbersTable'
+import FaceBook from './components/FaceBook'
+
+
 
 
 
@@ -101,16 +104,16 @@ function App() {
       <Greetings/>
       <Random/>
       <div className="btn-like">
-      <h2>Iteration 8</h2>
+<h2>Iteration 8</h2>
       <LikeButton />
       <LikeButton />
     </div>
-    <h2>Iteration 9</h2>
+<h2>Iteration 9</h2>
       <ClickablePicture
       img='maxence.png'
       imgClicked='maxence-glasses.png'/>
   </div>
-  <h2>Iteration 10</h2>
+<h2>Iteration 10</h2>
         <Dice/>
           <h2>Iteration 11</h2>
         <Carousel
@@ -123,6 +126,9 @@ function App() {
 />
 <h2>Iteration 12</h2>
     <NumbersTable limit={12} />
+<h2>Iteration 13</h2>
+<FaceBook />
+
 </div>
   );
 }
