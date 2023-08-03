@@ -115,9 +115,14 @@
 }
 
 .facebook img {
-  border-radius: 50%;
+
   display: block;
   object-fit: cover;
-  margin: 0 auto 1rem;
-  min-height: 200px;
+  margin: 0 200px;
+  padding: 10px;
+
+}
+.design-f{
+  display: flex;
+  flex-direction:row
 }
