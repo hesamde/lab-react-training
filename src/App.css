@@ -59,9 +59,9 @@
   align-items: center;
 }
 .driverCards img{
- width: 150px;
- border-radius: 50%;
- align-items: center;
+  width: 150px;
+  border-radius: 50%;
+  align-items: center;
 }
 
 .driver{
@@ -91,6 +91,10 @@
   flex-direction: row;
   margin-right: 10px;
 }
+.flesh{
+  padding:10px ;
+  margin-right: 10px;
 
+}
 
 
