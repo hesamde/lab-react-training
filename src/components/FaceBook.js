@@ -1,73 +1,69 @@
-import React, { useState } from 'react';
-import profilesData from '../data/berlin.json';
+import berlinDataJSON from '../data/berlin.json'
+import { useState } from 'react'
 
-const FaceBook = () => {
-    const [profileList, setProfileList] = useState(profilesData);
-    const [selectedCountry, setSelectedCountry] = useState(null);
+function FaceBook() {
+    const [filter, setFilter] = useState('...')
+    const countries = ["All", "England", "USA", "Malaysia", "Germany", "..."]
 
-    const selectCountry = (country) => {
-        setSelectedCountry(country);
-    };
-
-    const studentsProfile = profilesData.filter((student) => student.isStudent);
-    const countriesOfStudents = Array.from(new Set(studentsProfile.map((student) => student.country)));
-
-    const getSorting = (value) => {
-        const copy = [...profileList];
-        if (value === 'alphabeticalAscending') {
-        copy.sort((a, b) => a.lastName.localeCompare(b.lastName));
-        } else if (value === 'alphabeticalDescending') {
-        copy.sort((a, b) => b.lastName.localeCompare(a.lastName));
-        }
-        setProfileList(copy);
-    };
+    const hanldeFilterButton = (e) => {
+        setFilter(e.target.value)
+    }
 
     return (
-        <div>
+        <div className="FaceBook">
+        <div className="FilterButtons">
+            {countries.map((country, i) => (
             <button
-            onClick={() => {
-            setProfileList(profilesData);
-            setSelectedCountry(null);}}>All
+                key={country + i}
+                value={country}
+                className='FilterButton'
+                onClick={hanldeFilterButton}
+                style={
+                country === filter
+                    ? { backgroundColor: 'lightcyan' }
+                    : { backgroundColor: 'white' }
+                }
+            >
+                {country}
             </button>
-
-        {countriesOfStudents.map((country) => (
-            <button key={country} onClick={() => selectCountry(country)}>{country}</button>
-        ))}
-
-        <div>
-            <label htmlFor="profile-sort">Sort: </label>
-            <select onChange={(event) => getSorting(event.target.value)} name="profile" id="profile-sort">
-            <option value="default">Default</option>
-            <option value="alphabeticalAscending">Name: A-Z</option>
-            <option value="alphabeticalDescending">Name: Z-A</option>
-            </select>
+            ))}
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-            {profileList.map((profile) => (
-            <div
-                key={profile.firstName + profile.lastName}
-                className="card col-3"style={{backgroundColor: profile.country === selectedCountry ? 'lightblue' : 'white',border: 'solid',}}>
-                <img className="head-shot" src={profile.img} alt="" />
-                <div className="card-content">
+        {berlinDataJSON.map((profile, i) => {
+            const { firstName, lastName, country, img, isStudent } = profile;
+            return (
+            <div  //css
+                key={firstName + lastName + i}
+                style={
+                country === filter
+                    ? { backgroundColor: 'lightcyan' }
+                    : filter === 'All'
+                    ? { backgroundColor: 'lightcyan' }
+                    : { backgroundColor: 'white' }
+                }
+            >
+            <div> css
+                <img src={img} alt="css" />
+                </div>
+                <div>
                 <p>
-                    <span>First name: </span>{profile.firstName}
+                    <b>First name:</b> {firstName}
                 </p>
                 <p>
-                    <span>Last name: </span>{profile.lastName}
+                    <b>Last name:</b> {lastName}
                 </p>
                 <p>
-                    <span>Country: </span>{profile.country}
+                    <b>Country:</b> {country}
                 </p>
                 <p>
-                    <span>Type: </span>{profile.isStudent ? 'Student' : 'Teacher'}
+                    <b>Type:</b> {isStudent ? 'Student' : 'Teacher'}
                 </p>
                 </div>
             </div>
-            ))}
-        </div>
+            );
+        })}
         </div>
     );
-    };
+    }
 
-export default FaceBook;
+export default FaceBook
