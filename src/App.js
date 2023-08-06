@@ -15,7 +15,7 @@ import Carousel from './components/Carousel'
 import NumbersTable from './components/NumbersTable'
 import FaceBook from './components/FaceBook'
 import SignupPage from './components/SignupPage';
-// import RGBColorPicker from './components/RGBColorPicker';
+import RGBColorPicker from './components/RGBColorPicker';
 
 
 
@@ -126,11 +126,15 @@ function App() {
   ]}
 />
 <h2>Iteration 12</h2>
-    <NumbersTable limit={12} />
+  <NumbersTable limit={12} />
 <h2>Iteration 13 - 14</h2>
 <FaceBook />
 <h2>Iteration 15</h2>
 <SignupPage />
+<h2>Iteration 16</h2>
+<RGBColorPicker />
+
+
   </div>
 </div>
   );
