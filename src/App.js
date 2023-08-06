@@ -14,7 +14,7 @@ import Dice from './components/Dice'
 import Carousel from './components/Carousel'
 import NumbersTable from './components/NumbersTable'
 import FaceBook from './components/FaceBook'
-// import SignupPage from './components/SignupPage';
+import SignupPage from './components/SignupPage';
 // import RGBColorPicker from './components/RGBColorPicker';
 
 
@@ -114,8 +114,7 @@ function App() {
       <ClickablePicture
       img='maxence.png'
       imgClicked='maxence-glasses.png'/>
-  </div>
-<h2>Iteration 10</h2>
+      <h2>Iteration 10</h2>
         <Dice/>
           <h2>Iteration 11</h2>
         <Carousel
@@ -128,9 +127,11 @@ function App() {
 />
 <h2>Iteration 12</h2>
     <NumbersTable limit={12} />
-<h2>Iteration 13</h2>
+<h2>Iteration 13 - 14</h2>
 <FaceBook />
-
+<h2>Iteration 15</h2>
+<SignupPage />
+  </div>
 </div>
   );
 }
